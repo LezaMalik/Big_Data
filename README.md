@@ -66,7 +66,7 @@ To process and analyze big data effectively, specialized tools and technologies 
 ### 3. What is Apache Hadoop? Also mention its versions.
 Apache Hadoop is an open-source framework designed for storing and processing large datasets in a distributed computing environment. It was created to address the challenges of handling big data, which involves massive volumes of data that cannot be easily managed or processed using traditional methods.
 
-![hadoop picture](./assets/hadoop-layers.png)
+![hadoop picture](./assets/apache.png)
 
 
 The core components of Apache Hadoop include:
@@ -171,6 +171,8 @@ In summary, the Google File System (GFS) and Hadoop Distributed File System (HDF
 YARN stands for "Yet Another Resource Negotiator," is a key component in the Apache Hadoop ecosystem. It was introduced in Hadoop 2.x to address limitations in the original Hadoop MapReduce framework's resource management and job scheduling capabilities. YARN essentially separates the resource management and job scheduling aspects, enabling Hadoop to support a broader range of processing frameworks beyond just MapReduce.
 
 In the context of Hadoop, YARN serves as a resource management layer that efficiently allocates and manages resources across a cluster, enabling different applications to run concurrently and share cluster resources effectively. 
+
+![yarn picture](./assets/yarn.png)
 
 Here's how YARN works within the Hadoop ecosystem:
 
@@ -461,6 +463,8 @@ In the Hadoop ecosystem, Apache ZooKeeper is a distributed coordination service 
 
 ZooKeeper is often employed to solve challenges that arise in distributed systems, such as maintaining consistency, managing leader election, handling configuration changes, and implementing distributed locks.
 
+![zoo picture](./assets/zoo.jpg)
+
 Key features of ZooKeeper include:
 
 * **Hierarchical Data Model:** ZooKeeper organizes data in a hierarchical structure similar to a file system, with nodes known as "znodes." Each znode can contain data and can also represent a lock, a configuration, a status indicator, or other relevant information.
@@ -488,6 +492,10 @@ ZooKeeper's reliability and ability to manage coordination aspects in distribute
 ### 13. What is Spark MLlib?
 Spark MLlib (Machine Learning Library) is a component of the Apache Spark framework that provides a comprehensive set of machine learning algorithms and utilities for building scalable and distributed machine learning pipelines. MLlib is designed to enable efficient and scalable machine learning on large datasets using Spark's distributed computing capabilities.
 
+
+![Spark MLlib picture](./assets/ml-lib.png) 
+
+
 Key features of Spark MLlib include:
 
 * **Wide Range of Algorithms:** MLlib offers a diverse collection of machine learning algorithms for classification, regression, clustering, recommendation, dimensionality reduction, and more. This includes popular algorithms like decision trees, random forests, k-means clustering, collaborative filtering, and gradient boosting.
@@ -514,6 +522,10 @@ Spark MLlib is suitable for a wide range of machine learning applications, from 
 -------------------------------------------------
 
 ### Working of the Components of Hadoop
+
+
+![Hadoop EcoSystem picture](./assets/ecosystem.png)
+
 
 * **HDFS (Hadoop Distributed File System):** Divides and stores large files across multiple computers in a cluster for efficient data storage and retrieval.
 
