@@ -151,10 +151,90 @@ In summary, the Google File System (GFS) and Hadoop Distributed File System (HDF
 
 
 -------------------------------------------------
-5. What is YARN in hadoop context?
+### 5. What is YARN in hadoop context?
+YARN stands for "Yet Another Resource Negotiator," is a key component in the Apache Hadoop ecosystem. It was introduced in Hadoop 2.x to address limitations in the original Hadoop MapReduce framework's resource management and job scheduling capabilities. YARN essentially separates the resource management and job scheduling aspects, enabling Hadoop to support a broader range of processing frameworks beyond just MapReduce.
+
+In the context of Hadoop, YARN serves as a resource management layer that efficiently allocates and manages resources across a cluster, enabling different applications to run concurrently and share cluster resources effectively. 
+
+Here's how YARN works within the Hadoop ecosystem:
+
+* **Resource Management:** YARN manages the physical resources (CPU, memory, etc.) of the cluster's nodes. It keeps track of available resources and allocates them to applications as needed. This enables multi-tenancy, allowing various applications to coexist on the same cluster without negatively impacting each other.
+
+* **Application Management:** YARN allows multiple applications to run on the same cluster simultaneously. Each application runs within its own application master, which is responsible for managing its tasks, monitoring progress, and negotiating resource requirements.
+
+* **Job Scheduling:** YARN's ResourceManager handles the allocation of resources based on the resource requirements of applications. It makes scheduling decisions based on fairness and capacity, ensuring optimal resource utilization across the cluster.
+
+* **NodeManager:** Each node in the cluster runs a NodeManager process, responsible for monitoring resource usage on the node and reporting this information to the ResourceManager. It also manages the execution of tasks requested by the ApplicationMaster.
+
+With YARN, Hadoop clusters became more versatile and efficient. In addition to running MapReduce jobs, Hadoop 2.x and later versions can host various other processing frameworks that can share resources in a more flexible manner. This enables a wide range of applications, including real-time data processing (like Apache Spark and Apache Flink), interactive querying (like Apache Tez), and more, to be seamlessly integrated into the Hadoop ecosystem.
 
 -------------------------------------------------
-6. What is MapReduce ? Solve an example also.
+### 6. What is MapReduce ? Solve an example also.
+
+MapReduce is a programming model and processing paradigm designed for processing and generating large-scale datasets across distributed computing clusters. It was popularized by Google and became a fundamental concept in the Hadoop ecosystem. The idea behind MapReduce is to break down a complex data processing task into smaller subtasks that can be executed in parallel across multiple nodes in a cluster.
+
+The MapReduce model consists of two main phases: the "Map" phase and the "Reduce" phase.
+
+* **Map Phase:**
+ In this phase, the input data is divided into chunks, and each chunk is processed independently by a "Map" function. The "Map" function takes the input data, applies a transformation to it, and emits key-value pairs as intermediate output.
+
+* **Shuffle and Sort:**
+ After the "Map" phase, the intermediate key-value pairs are shuffled and sorted based on their keys. This step groups together all intermediate values associated with the same key, preparing the data for the next phase.
+
+* **Reduce Phase:**
+ In the "Reduce" phase, the shuffled and sorted intermediate key-value pairs are processed by the "Reduce" function. The "Reduce" function takes a key and a list of values associated with that key, applies some computation to those values, and generates final output data.
+
+**Example:**
+
+Problem: *Calculate the average score of students from a dataset containing student names and their corresponding scores.*
+
+**Map Phase:**
+
+Input: 
+    
+    ("Alice", 85), ("Bob", 92), ("Alice", 78), ("Bob", 90), ("Charlie", 75)
+
+Map Function:
+
+    Map("Alice", 85) -> ("Alice", 85)
+    
+    Map("Bob", 92) -> ("Bob", 92)
+    
+    Map("Alice", 78) -> ("Alice", 78)
+    
+    Map("Bob", 90) -> ("Bob", 90)
+    
+    Map("Charlie", 75) -> ("Charlie", 75)
+
+Shuffle and Sort:
+
+Intermediate Key-Value Pairs: 
+
+    ("Alice", [85, 78]), ("Bob", [92, 90]), ("Charlie", [75])
+
+
+
+**Reduce Phase:**
+
+Reduce Function:
+ 
+    Reduce("Alice", [85, 78]) -> ("Alice", 81.5)
+    
+    Reduce("Bob", [92, 90]) -> ("Bob", 91.0)
+    
+    Reduce("Charlie", [75]) -> ("Charlie", 75.0)
+
+**Output:**
+
+    "Alice" has an average score of 81.5.
+    
+    "Bob" has an average score of 91.0.
+    
+    "Charlie" has an average score of 75.0.
+
+
+In this example, the MapReduce paradigm effectively calculates the average score for each student by distributing the data processing across multiple nodes and aggregating the results.
+   
 
 -------------------------------------------------
 7. What is Apache Tez?
