@@ -410,7 +410,29 @@ In essence, Apache Pig aims to simplify the process of writing data processing w
 
 
 -------------------------------------------------
-11. What is Sentry?
+### 11. What is Sentry?
+Sentry is an open-source project that provides fine-grained, role-based access control for data and metadata in the Hadoop ecosystem. It is designed to enhance the security and governance aspects of Hadoop-based data platforms, ensuring that users and applications have appropriate access to data based on their roles and permissions.
+
+Key features of Sentry include:
+
+* **Role-Based Access Control (RBAC):** Sentry allows administrators to define roles and assign them to users or groups. Roles can have specific permissions associated with them, determining what actions users are allowed to perform on data and metadata.
+
+* **Granular Permissions:** Sentry offers a high level of granularity in terms of permissions. It enables administrators to control access to specific tables, columns, databases, and more, ensuring that users only have access to the data they are authorized to see.
+
+* **Metadata Security:** Sentry not only controls access to data but also manages access to metadata. This means that users with appropriate permissions can access metadata like table definitions and schemas while restricting unauthorized access.
+
+* **Unified Security Across Ecosystem Components:** Sentry integrates with various Hadoop ecosystem components, such as Hive, Impala, HBase, Solr, and Kafka. This ensures that access control policies are consistently enforced across different data processing and storage technologies.
+
+* **Auditing:** Sentry provides auditing capabilities that allow organizations to track user activities and changes to permissions. This is crucial for compliance, monitoring, and security analysis.
+
+* **Centralized Management:** Sentry provides a centralized administration interface that simplifies the management of security policies. Administrators can define and manage roles and permissions from a single location.
+
+* **Dynamic Authorization:** Sentry supports dynamic authorization, meaning that access control decisions can be made in real-time based on user context and attributes.
+
+* **Scalability:** Sentry is designed to handle large-scale deployments with a high number of users and complex data access patterns.
+  
+
+Sentry is a valuable tool for organizations that need to ensure data security, compliance, and proper governance within their Hadoop-based data platforms. By enforcing fine-grained access control and permissions, Sentry helps prevent unauthorized data access and promotes a more secure and controlled environment for big data processing and analytics.
 
 -------------------------------------------------
 12. What is ZOOKEEPER in hadoop context?
