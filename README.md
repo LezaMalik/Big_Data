@@ -301,10 +301,113 @@ Overall, Apache Spark is a powerful tool in the big data landscape, enabling org
 
 -------------------------------------------------
 
-9. Compare MapReduce / Tez / Spark 
+### 9. Compare MapReduce / Tez / Spark
+Here is the comparison of MapReduce, Tez, and Spark in terms of their features, performance, and use cases within the context of big data processing:
+
+* **1. Programming Model:**
+
+  MapReduce: MapReduce follows a two-phase processing model, where data is processed in map and reduce phases, requiring explicit definition of map and reduce functions.
+
+  Tez: Tez improves upon MapReduce by introducing a more flexible and optimized execution framework, allowing for more complex data processing DAGs (Directed Acyclic Graphs) beyond the strict map and reduce phases.
+
+  Spark: Spark provides a more versatile programming model with Resilient Distributed Datasets (RDDs) and DataFrames, enabling high-level transformations and actions that can be optimized and executed more efficiently.
+
+
+* **2. Performance:**
+
+  MapReduce: MapReduce processes intermediate data to disk, which can lead to slower performance due to I/O operations.
+
+  Tez: Tez improves performance by reducing the need for intermediate data writes to disk and optimizing task execution.
+
+  Spark: Spark's in-memory processing significantly enhances performance by keeping data in memory whenever possible, reducing I/O overhead and enabling faster data access and transformations.
+
+
+* **3. Ease of Use:**
+  
+  MapReduce: Writing MapReduce programs can be complex and requires developers to handle low-level details.
+  
+  Tez: Tez simplifies the programming model compared to MapReduce but still requires some understanding of the DAG structure.
+  
+  Spark: Spark offers a more intuitive and higher-level API, making it easier for developers to express complex data processing tasks without needing to manage as many low-level details.
+
+
+* **4. Iterative Processing:**
+
+  MapReduce: MapReduce is not well-suited for iterative algorithms (common in machine learning) due to the overhead of reading/writing data between each iteration.
+
+  Tez: Tez improves iterative processing over MapReduce but may still suffer from I/O overhead.
+ 
+  Spark: Spark's in-memory processing is well-suited for iterative algorithms, making it a preferred choice for machine learning and graph processing tasks.
+
+
+* **5. Real-time Processing:**
+
+  MapReduce: Not suitable for real-time processing due to batch-oriented nature.
+
+  Tez: Tez doesn't directly address real-time processing either.
+
+  Spark: Spark includes Spark Streaming for real-time data processing, making it suitable for applications that require low-latency processing of data streams.
+
+
+* **6. Ecosystem Integration:**
+  
+  MapReduce: Part of the Hadoop ecosystem, tightly coupled with HDFS for storage.
+ 
+  Tez: Also part of the Hadoop ecosystem, built to improve upon MapReduce.
+
+  Spark: While it can integrate with Hadoop's ecosystem, Spark can also function independently of HDFS and can work with various data sources.
+  
+
+* **7. Use Cases:**
+
+  MapReduce: Well-suited for batch processing of large volumes of data.
+  
+  Tez: Similar to MapReduce, but offers better performance for complex processing DAGs.
+  
+  Spark: Suitable for batch processing, iterative algorithms, interactive queries, real-time processing, and machine learning, offering a broader range of use cases.
+
+  
+In summary, MapReduce was the initial paradigm for big data processing, but it had limitations in terms of performance and flexibility. Tez aimed to improve upon MapReduce by optimizing execution and introducing a DAG-based model. However, Spark emerged as a comprehensive framework that combines in-memory processing, ease of use, and support for various processing models, making it a popular choice for a wide range of big data processing tasks.
+
+Here is the tabular representation as well:
+
+| Aspect            | MapReduce                               | Tez                                      | Spark                                   |
+|-------------------|-----------------------------------------|------------------------------------------|-----------------------------------------|
+| Programming Model | Two-phase model (map and reduce)        | DAG-based model beyond map and reduce   | RDDs, DataFrames, high-level operations |
+| Performance       | Intermediate data written to disk       | Reduced need for intermediate writes    | In-memory processing, faster execution  |
+| Ease of Use       | Low-level, requires managing details    | Improved, but still requires DAG        | High-level APIs, less low-level work   |
+| Iterative         | Not suitable for iterative algorithms   | Improved, but still has I/O overhead    | In-memory processing, suitable          |
+| Real-time         | Not suitable for real-time processing  | Doesn't directly address real-time      | Spark Streaming for real-time           |
+| Ecosystem         | Part of Hadoop ecosystem, coupled to HDFS | Part of Hadoop ecosystem, improves on MapReduce | Can work independently of HDFS          |
+| Use Cases         | Batch processing of large data volumes | Similar to MapReduce, optimized DAGs    | Batch, iterative, real-time, machine learning |
+
+
 
 -------------------------------------------------
-10. What is PIG in hadoop context?
+
+### 10. What is PIG in hadoop context?
+Pig is a high-level scripting language and platform designed for processing and analyzing large datasets. Apache Pig simplifies the development of complex data processing tasks by providing a higher-level abstraction over the traditional MapReduce programming model.
+
+Here are some key points about Pig:
+
+* **Scripting Language:** Pig uses a language called Pig Latin, which is a scripting language specifically designed for expressing data transformations. Pig Latin abstracts away many of the complexities of writing low-level MapReduce code, making it easier for developers to work with big data.
+
+* **Data Flow Language:** Pig Latin is a data flow language, meaning you describe the sequence of transformations and operations that should be applied to your data, rather than the exact step-by-step procedural approach of MapReduce.
+
+* **Optimization:** Pig includes a query optimizer that can rearrange and optimize the data processing operations you define in Pig Latin. This optimizer can help improve the performance of your data processing tasks.
+
+* **Abstraction Layer:** Pig acts as an abstraction layer over the MapReduce framework. Pig scripts are compiled into a series of MapReduce jobs that execute the specified transformations on the data.
+
+* **Rich Set of Functions:** Pig provides a wide range of built-in functions for common data transformations, aggregations, filtering, and more. This reduces the need for developers to implement these functions from scratch.
+
+* **Schema Flexibility:** Pig allows both structured and semi-structured data to be processed. While it's schema-flexible, providing a schema can help optimize performance.
+
+* **Ease of Use:** Pig is particularly beneficial for developers who are familiar with SQL-like languages or scripting languages. It abstracts the low-level details of MapReduce programming, making it more approachable for newcomers to the Hadoop ecosystem.
+
+* **Integration with Hadoop Ecosystem:** Pig is designed to work within the Hadoop ecosystem. It can process data stored in HDFS and interact with other Hadoop components like Hive and HBase.
+
+In essence, Apache Pig aims to simplify the process of writing data processing workflows on Hadoop by providing a more user-friendly language and abstraction layer. It's well-suited for tasks that involve multiple data transformations and complex data flows, especially when the focus is on expressing the logic of the processing rather than the nitty-gritty details of MapReduce programming.
+
 
 -------------------------------------------------
 11. What is Sentry?
