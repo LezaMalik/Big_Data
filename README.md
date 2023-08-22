@@ -7,6 +7,8 @@
 The 5 V's of Big Data are a set of characteristics that describe the challenges and dimensions of big data. 
 The 5 V's are:
 
+![5VsofBigData picture](./assets/5VData.png)
+
 * **Volume:** 
 Refers to the sheer size of the data being generated and collected. 
 Big data involves datasets that are too large to be comfortably processed by traditional database systems. 
@@ -56,10 +58,15 @@ The concept of big data has gained prominence due to advancements in technology,
 To process and analyze big data effectively, specialized tools and technologies have emerged, such as distributed computing frameworks (like Hadoop), NoSQL databases, data lakes, and machine learning algorithms. These tools enable organizations to handle the challenges posed by the enormous amounts of data generated in today's digital world.
 
 
+![bigData picture](./assets/bigdata.JPG)
+
+
 -------------------------------------------------
 
 ### 3. What is Apache Hadoop? Also mention its versions.
 Apache Hadoop is an open-source framework designed for storing and processing large datasets in a distributed computing environment. It was created to address the challenges of handling big data, which involves massive volumes of data that cannot be easily managed or processed using traditional methods.
+
+![hadoop picture](./assets/hadoop-layers.png)
 
 
 The core components of Apache Hadoop include:
@@ -97,6 +104,8 @@ Following are the versions introduced by Apache Hadoop:
 ### 4. What is GFS - Google File System?
 The Google File System (GFS) is a proprietary distributed file system developed by Google to manage and store large amounts of data across clusters of commodity hardware. It was designed to meet Google's specific needs for handling vast amounts of data efficiently and reliably, and it served as a foundation for many of Google's services, including Google Search, Google Maps, and Gmail.
 
+
+![gfs picture](./assets/gfs.jpg)
 
 Key characteristics of the Google File System include:
 
@@ -193,6 +202,9 @@ The MapReduce model consists of two main phases: the "Map" phase and the "Reduce
 * **Reduce Phase:**
  In the "Reduce" phase, the shuffled and sorted intermediate key-value pairs are processed by the "Reduce" function. The "Reduce" function takes a key and a list of values associated with that key, applies some computation to those values, and generates final output data.
 
+![mapreducer picture](./assets/mapreduce.png)
+
+
 **Example:**
 
 Problem: *Calculate the average score of students from a dataset containing student names and their corresponding scores.*
@@ -268,11 +280,15 @@ Key features of Apache Tez include:
 
 * **Efficient Resource Utilization:** Tez optimizes the utilization of cluster resources by reducing data movement and enabling better sharing of resources among tasks.
 
+![tez picture](./assets/tez.png)
 
 -------------------------------------------------
 
 ### 8. What is Apache Spark?
 Apache Spark is an open-source, distributed computing framework designed for processing and analyzing large-scale data sets. It's a part of the broader big data ecosystem, often used in conjunction with Hadoop, but it can also work independently of Hadoop's HDFS (Hadoop Distributed File System). Apache Spark aims to provide a more efficient and flexible alternative to the traditional MapReduce processing model used in Hadoop.
+
+
+![spark picture](./assets/spark.png)
 
 Key features of Apache Spark:
 
@@ -297,6 +313,8 @@ While Spark can be used independently, it's often employed alongside Hadoop, whe
 
 
 Overall, Apache Spark is a powerful tool in the big data landscape, enabling organizations to process and analyze vast amounts of data more efficiently and with more flexibility than traditional approaches like MapReduce.
+
+![spark picture](./assets/spark2.jpg)
 
 
 -------------------------------------------------
@@ -407,6 +425,8 @@ Here are some key points about Pig:
 * **Integration with Hadoop Ecosystem:** Pig is designed to work within the Hadoop ecosystem. It can process data stored in HDFS and interact with other Hadoop components like Hive and HBase.
 
 In essence, Apache Pig aims to simplify the process of writing data processing workflows on Hadoop by providing a more user-friendly language and abstraction layer. It's well-suited for tasks that involve multiple data transformations and complex data flows, especially when the focus is on expressing the logic of the processing rather than the nitty-gritty details of MapReduce programming.
+
+![pig picture](./assets/pig.png)
 
 
 -------------------------------------------------
