@@ -237,7 +237,27 @@ In this example, the MapReduce paradigm effectively calculates the average score
    
 
 -------------------------------------------------
-7. What is Apache Tez?
+### 7. What is Apache Tez?
+Apache Tez is an open-source framework built on top of Apache Hadoop YARN (Yet Another Resource Negotiator). Tez aims to improve the efficiency and performance of data processing tasks in the Hadoop ecosystem by providing a more flexible and optimized execution engine. It enables faster and more interactive processing of big data workloads by optimizing the execution of complex directed acyclic graph (DAG) workflows.
+
+Tez addresses some limitations of the original MapReduce model, such as its reliance on a two-phase execution model (Map and Reduce) and its lack of support for complex data processing tasks. Tez introduces a more generalized execution framework that allows users to express arbitrary data processing logic as directed acyclic graphs. This enables complex workflows involving multiple stages and different types of operations to be executed more efficiently.
+
+Key features of Apache Tez include:
+
+* **DAG Execution:** Tez enables the execution of complex data processing workflows represented as directed acyclic graphs (DAGs). These DAGs can include multiple stages of computation, data transformations, joins, aggregations, and more.
+
+* **Efficient Data Movement:** Tez optimizes data movement between tasks, minimizing the amount of data shuffled across the cluster. This reduces the overall processing time and improves performance.
+
+* **Task-level Optimization:** Tez supports task-level optimization, allowing tasks to be dynamically optimized based on data characteristics and execution history. This helps in reducing execution time and resource consumption.
+
+* **User-Defined Functions:** Tez supports custom user-defined functions, enabling developers to express their specific processing logic within DAG workflows.
+  
+* **Broad Ecosystem Integration:** Tez is designed to work with a variety of data processing frameworks. It can be used as an execution engine for Hive (a data warehousing and SQL-like querying tool), Pig (a data flow language for data processing), and other compatible tools.
+
+* **Compatibility with YARN:** Tez is built on top of YARN, making it compatible with Hadoop clusters and allowing it to leverage YARN's resource management capabilities.
+
+* **Efficient Resource Utilization:** Tez optimizes the utilization of cluster resources by reducing data movement and enabling better sharing of resources among tasks.
+
 
 -------------------------------------------------
 8. What is Apache Spark?
