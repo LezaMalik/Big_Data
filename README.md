@@ -490,5 +490,29 @@ Key features of Spark MLlib include:
 
 Spark MLlib is suitable for a wide range of machine learning applications, from simple tasks like classification and regression to more complex tasks like recommendation systems and natural language processing. Its integration with the Spark ecosystem and support for distributed computing make it a powerful tool for machine learning on big data.
 
+
 -------------------------------------------------
 
+### Working of the Components of Hadoop
+
+* **HDFS (Hadoop Distributed File System):** Divides and stores large files across multiple computers in a cluster for efficient data storage and retrieval.
+
+* **MapReduce:** Breaks down tasks into smaller parts, processes them in parallel, and then combines the results, making big data processing manageable.
+
+* **YARN (Yet Another Resource Negotiator):** Manages resources and schedules tasks to ensure efficient use of cluster resources.
+
+* **Pig:** Simplifies data processing by allowing users to write high-level scripts that translate into MapReduce jobs.
+
+* **Hive:** Provides a query language for data analysis and translates queries into MapReduce jobs for processing structured data.
+
+* **Spark:** Processes data rapidly using in-memory computation, supports various workloads like batch processing, streaming, and machine learning.
+
+* **ZooKeeper:** Coordinates and synchronizes distributed applications by managing shared configurations, naming, and group membership.
+
+* **Oozie:** Schedules and manages workflows of Hadoop jobs to automate complex data processing tasks.
+
+* **Sqoop:** Moves data between Hadoop and relational databases, enabling seamless data integration.
+
+* **Flume:** Collects, aggregates, and transfers streaming data into Hadoop for analysis.
+
+* **Kafka:** Publishes and subscribes to data streams, providing a platform for real-time event processing.
