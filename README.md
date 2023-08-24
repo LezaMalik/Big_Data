@@ -189,7 +189,7 @@ With YARN, Hadoop clusters became more versatile and efficient. In addition to r
 
 -------------------------------------------------
 
-### 6. What is MapReduce ? Solve an example also.
+### 6. What is MapReduce? Solve an example also.
 
 MapReduce is a programming model and processing paradigm designed for processing and generating large-scale datasets across distributed computing clusters. It was popularized by Google and became a fundamental concept in the Hadoop ecosystem. The idea behind MapReduce is to break down a complex data processing task into smaller subtasks that can be executed in parallel across multiple nodes in a cluster.
 
@@ -321,7 +321,7 @@ Overall, Apache Spark is a powerful tool in the big data landscape, enabling org
 
 -------------------------------------------------
 
-### 9. Compare MapReduce / Tez / Spark
+### 9. Compare MapReduce / Tez / Spark.
 Here is the comparison of MapReduce, Tez, and Spark in terms of their features, performance, and use cases within the context of big data processing:
 
 * **1. Programming Model:**
