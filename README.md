@@ -61,7 +61,7 @@ To process and analyze big data effectively, specialized tools and technologies 
 ![bigData picture](./assets/bigdata.JPG)
 
 
--------------------------------------------------
+--------------------------------------------------
 
 ### 3. What is Apache Hadoop? Also mention its versions.
 Apache Hadoop is an open-source framework designed for storing and processing large datasets in a distributed computing environment. It was created to address the challenges of handling big data, which involves massive volumes of data that cannot be easily managed or processed using traditional methods.
@@ -99,7 +99,7 @@ Following are the versions introduced by Apache Hadoop:
   Hadoop 3 brought further improvements to resource management and added support for erasure coding in HDFS, reducing storage overhead. It also introduced improvements to support larger clusters, more efficient data processing, and enhanced security features.
 
  
--------------------------------------------------
+--------------------------------------------------
 
 ### 4. What is GFS - Google File System?
 The Google File System (GFS) is a proprietary distributed file system developed by Google to manage and store large amounts of data across clusters of commodity hardware. It was designed to meet Google's specific needs for handling vast amounts of data efficiently and reliably, and it served as a foundation for many of Google's services, including Google Search, Google Maps, and Gmail.
@@ -165,7 +165,7 @@ Here's a comparison between GFS and HDFS:
 In summary, the Google File System (GFS) and Hadoop Distributed File System (HDFS) are similar in their goals of providing scalable and fault-tolerant storage for large datasets. While GFS was developed by Google for its internal use, HDFS emerged as an open-source project within the Apache Hadoop ecosystem and has become a central component in the big data landscape.
 
 
--------------------------------------------------
+--------------------------------------------------
 
 ### 5. What is YARN in hadoop context?
 YARN stands for "Yet Another Resource Negotiator," is a key component in the Apache Hadoop ecosystem. It was introduced in Hadoop 2.x to address limitations in the original Hadoop MapReduce framework's resource management and job scheduling capabilities. YARN essentially separates the resource management and job scheduling aspects, enabling Hadoop to support a broader range of processing frameworks beyond just MapReduce.
@@ -521,7 +521,7 @@ Spark MLlib is suitable for a wide range of machine learning applications, from 
 
 -------------------------------------------------
 
-### Working of the Components of Hadoop
+### Mention Hadoop Components with it's working.
 
 
 ![Hadoop EcoSystem picture](./assets/ecosystem.png)
