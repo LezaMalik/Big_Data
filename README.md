@@ -550,6 +550,7 @@ Spark MLlib is suitable for a wide range of machine learning applications, from 
 * **Kafka:** Publishes and subscribes to data streams, providing a platform for real-time event processing.
 
 
+-------------------------------------------------
 
 ### 15. What is Apache Kafka?
  
@@ -570,3 +571,6 @@ Here's how Kafka fits into the Hadoop ecosystem:
 * **Integration with Hadoop Components:** Kafka can be used as a data source for Hadoop components like HDFS, Hive, and HBase. This allows organizations to merge real-time and batch processing approaches seamlessly.
 
 * **Data Pipelines:** Kafka facilitates building complex data pipelines where data flows between different processing stages, enabling a more flexible and agile architecture for data processing.
+
+  
+-------------------------------------------------
