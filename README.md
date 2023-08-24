@@ -521,7 +521,7 @@ Spark MLlib is suitable for a wide range of machine learning applications, from 
 
 -------------------------------------------------
 
-### Mention Hadoop Components with it's working.
+### 14. Mention Hadoop Components with it's working.
 
 
 ![Hadoop EcoSystem picture](./assets/ecosystem.png)
@@ -548,3 +548,25 @@ Spark MLlib is suitable for a wide range of machine learning applications, from 
 * **Flume:** Collects, aggregates, and transfers streaming data into Hadoop for analysis.
 
 * **Kafka:** Publishes and subscribes to data streams, providing a platform for real-time event processing.
+
+
+
+### 15. What is Apache Kafka?
+ 
+Apache Kafka is a distributed event streaming platform. It is not a part of the Hadoop ecosystem itself but is often used in conjunction with Hadoop and other big data technologies to handle real-time data streaming and processing.
+
+Apache Kafka is designed to efficiently handle high-throughput, fault-tolerant, and scalable data streaming. It provides a publish-subscribe model where producers can send records to topics, and consumers can subscribe to those topics to receive and process the records in real-time.
+
+Kafka is commonly used in scenarios where you need to process and analyze large volumes of data as it's generated, rather than storing and batch-processing it later. It can be integrated with Hadoop components like HDFS (Hadoop Distributed File System) and Apache Spark to allow for seamless data flow from real-time streams to batch processing and storage.
+
+Here's how Kafka fits into the Hadoop ecosystem:
+
+* **Ingestion:** Kafka acts as a buffer between data sources (producers) and data consumers. Data can be ingested from various sources (such as application logs, sensors, databases, etc.) into Kafka topics.
+
+* **Real-time Processing:** Once data is in Kafka topics, consumers (which can include Spark, Flink, Storm, or custom applications) can process this data in real-time, performing tasks like real-time analytics, monitoring, or anomaly detection.
+
+* **Storage and Data Archival:** While Kafka is not meant to be a long-term storage solution, it can serve as a temporary storage or buffer before data is processed and stored in a more permanent data store like HDFS.
+
+* **Integration with Hadoop Components:** Kafka can be used as a data source for Hadoop components like HDFS, Hive, and HBase. This allows organizations to merge real-time and batch processing approaches seamlessly.
+
+* **Data Pipelines:** Kafka facilitates building complex data pipelines where data flows between different processing stages, enabling a more flexible and agile architecture for data processing.
