@@ -573,7 +573,7 @@ Here's how Kafka fits into the Hadoop ecosystem:
 * **Data Pipelines:** Kafka facilitates building complex data pipelines where data flows between different processing stages, enabling a more flexible and agile architecture for data processing.
 
 
-  ![Apache Kafka picture](./assets/kafka.png)
+![kafka picture](./assets/kafka.png)
 
   
 -------------------------------------------------
