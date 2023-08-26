@@ -5,6 +5,7 @@
 ### 1. What are 5 V's of data?
  
 The 5 V's of Big Data are a set of characteristics that describe the challenges and dimensions of big data. 
+
 The 5 V's are:
 
 ![5VsofBigData picture](./assets/5VData.png)
